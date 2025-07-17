@@ -33,6 +33,9 @@ def generate_page(from_path, template_path, dest_path, basepath):
     template = template.replace('href="/', f'href="{basepath}')
     template = template.replace('src="/', f'src="{basepath}')
 
+    print("After Href Replace:", template[:80])
+    print("After Src Replace:", template[:80])
+
     dest_dir_path = os.path.dirname(dest_path)
     if dest_dir_path != "":
         os.makedirs(dest_dir_path, exist_ok=True)

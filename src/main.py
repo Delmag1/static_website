@@ -18,11 +18,11 @@ def main():
     if len(sys.argv) > 1:
         basepath = sys.argv[1]
 
-    print("Deleting public directory...")
+    print("Deleting docs directory...")
     if os.path.exists(dir_path_public):
         shutil.rmtree(dir_path_public)
 
-    print("Copying static files to public directory...")
+    print("Copying static files to docs directory...")
     copy_files_recursive(dir_path_static, dir_path_public)
 
     print("Generating content...")
